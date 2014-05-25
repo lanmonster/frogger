@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1398220268 source:c:\users\kyle\desktop\frogger\plotter.cpp
+	<iostream>
+	"plotter.h"
+
+1398220268 c:\users\kyle\desktop\frogger\plotter.h
+	<windows.h>
+	<mmsystem.h>
+	<conio.h>
+
+1398902720 source:c:\users\kyle\desktop\frogger\world.cpp
+	<iostream>
+	<fstream>
+	"World.h"
+	"plotter.h"
+
+1398898850 c:\users\kyle\desktop\frogger\world.h
+	"plotter.h"
+	"Street.h"
+	"River.h"
+	"Frog.h"
+	"WinZone.h"
+
+1400450199 source:c:\users\kyle\desktop\frogger\main.cpp
+	<iostream>
+	<fstream>
+	"World.h"
+	"plotter.h"
+
+1398822608 c:\users\kyle\desktop\frogger\street.h
+	"Car.h"
+
+1398822079 c:\users\kyle\desktop\frogger\car.h
+	"Object.h"
+
+1398841776 c:\users\kyle\desktop\frogger\object.h
+	"plotter.h"
+
+1398863280 c:\users\kyle\desktop\frogger\river.h
+	"Log.h"
+
+1398902696 c:\users\kyle\desktop\frogger\frog.h
+	"Object.h"
+
+1398856387 c:\users\kyle\desktop\frogger\log.h
+	"Object.h"
+
+1398896236 source:c:\users\kyle\desktop\frogger\frog.cpp
+	<iostream>
+	"Frog.h"
+	"plotter.h"
+
+1398856678 source:c:\users\kyle\desktop\frogger\car.cpp
+	"Car.h"
+
+1400450054 source:c:\users\kyle\desktop\frogger\log.cpp
+	"Log.h"
+
+1398822586 source:c:\users\kyle\desktop\frogger\street.cpp
+	"Street.h"
+
+1398859070 source:c:\users\kyle\desktop\frogger\river.cpp
+	"River.h"
+
+1398897956 c:\users\kyle\desktop\frogger\winzone.h
+	"Object.h"
+
+1398898028 source:c:\users\kyle\desktop\frogger\winzone.cpp
+	"WinZone.h"
+
