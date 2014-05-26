@@ -112,13 +112,12 @@ void Car::drawCar(int lane)
             p.plot(colNum, rowNum, SQUARE);
 			p.plot(colNum, rowNum + 1, SQUARE);
 
-			if( colNum > 10 )
-			{
+
 			    p.setColor(black);
-			    p.plot(colNum - 10, 3, SQUARE);
-                p.plot(colNum - 10, 4, SQUARE);
+			    p.plot(colNum - 5, rowNum, SQUARE);
+                p.plot(colNum - 5, rowNum+1, SQUARE);
                 p.setColor(red);
-			}
+
 
 			colNum++;
 
@@ -127,6 +126,7 @@ void Car::drawCar(int lane)
                 colNum = 0;
             }
 
+
 			timer = CAR_SPEED; // reset back timer
 		}
 
@@ -134,16 +134,22 @@ void Car::drawCar(int lane)
 
     case 2:
         rowNum = 34;
-		if (timer == 0) {
+		if (timer == 0)
+        {
+            if (colNum == 0)
+            {
+                colNum = 85;
+            }
             p.plot(colNum, rowNum, SQUARE);
 			p.plot(colNum, rowNum + 1, SQUARE);
 
 			p.setColor(black);
-			p.plot(colNum - 10, 8, SQUARE);
-			p.plot(colNum - 10, 9, SQUARE);
+            p.plot(colNum + 5, rowNum, SQUARE);
+            p.plot(colNum + 5, rowNum+1, SQUARE);
 			p.setColor(red);
-			colNum++;
-			if (colNum == 85) colNum = 0;
+
+			colNum--;
+
 			timer = CAR_SPEED;
 		}
         break;
@@ -155,8 +161,8 @@ void Car::drawCar(int lane)
 			p.plot(colNum, rowNum + 1, SQUARE);
 
             p.setColor(black);
-            p.plot(colNum-10, 13, SQUARE);
-            p.plot(colNum-10, 14, SQUARE);
+			    p.plot(colNum - 5, rowNum, SQUARE);
+                p.plot(colNum - 5, rowNum+1, SQUARE);
             p.setColor(red);
             colNum++;
 			if (colNum == 85) colNum = 0;
@@ -166,18 +172,24 @@ void Car::drawCar(int lane)
 
     case 4:
         rowNum = 44;
-		if (timer == 0) {
+		if (timer == 0)
+        {
+            if (colNum == 0)
+            {
+                colNum = 85;
+            }
             p.plot(colNum, rowNum, SQUARE);
 			p.plot(colNum, rowNum + 1, SQUARE);
 
-            p.setColor(black);
-            p.plot(colNum-10, 18, SQUARE);
-            p.plot(colNum-10, 19, SQUARE);
-            p.setColor(red);
-            colNum++;
-			if (colNum == 85) colNum = 0;
+			p.setColor(black);
+            p.plot(colNum + 5, rowNum, SQUARE);
+            p.plot(colNum + 5, rowNum+1, SQUARE);
+			p.setColor(red);
+
+			colNum--;
+
 			timer = CAR_SPEED;
-        }
+		}
         break;
 
     case 5:
@@ -187,8 +199,8 @@ void Car::drawCar(int lane)
 			p.plot(colNum, rowNum + 1, SQUARE);
 
             p.setColor(black);
-            p.plot(colNum-10, 23, SQUARE);
-            p.plot(colNum-10, 24, SQUARE);
+			    p.plot(colNum - 5, rowNum, SQUARE);
+                p.plot(colNum - 5, rowNum+1, SQUARE);
             p.setColor(red);
             colNum++;
 			if (colNum == 85) colNum = 0;

@@ -1,27 +1,31 @@
 /***************************
 Author:         Kyle Lanmon
-Date:        2014-05-22
+Date:        2014-04-22
     -commented out undefined functions
     -added start screen
-Date:        2014-05-23
+Date:        2014-04-23
     -added drawCar, drawLog, drawFrog
     -created Frog class
-Date:       2014-05-29
+Date:       2014-04-29
     -redesign. made classes for everything
     -fix frog move bug
     -created win zones
 
-Date:       2014-05-30
+Date:       2014-04-30
     -fixed win zone bug
 
-TODO
+Date:       2014-05-26
     -make cars/logs move
+
+TODO
     -handle collision
     -show number of lives
 ****************************/
 
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 #include "World.h"
 #include "plotter.h"
 
@@ -29,6 +33,8 @@ using namespace std;
 
 int main()
 {
+    int random;
+    srand(time(NULL));
     World game;
     try{
         game.setup();
@@ -58,13 +64,17 @@ int main()
         }
         else
 		{
+
 			// frog
 			game.f.drawFrog(game.f.getColor());
 			// logs
 			for( int i = 1; i < 6; i++ )
             {
-                game.r.logs[i-1].drawLog(i);
-                game.s.cars[i-1].drawCar(i);
+                random = rand() % 5 + 1;
+                game.r.logs[random-1].drawLog(random);
+
+                random = rand() % 5 + 1;
+                game.s.cars[random-1].drawCar(random);
             }
 		}
     }

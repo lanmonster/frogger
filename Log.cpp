@@ -133,24 +133,23 @@ void Log::drawLog(int lane)
         rowNum = 3;
 
 		// is timer 0?
-		if ( timer == 0 )
+		if (timer == 0)
         {
-			// yes its zero, time to update
+            if (colNum == 0)
+            {
+                colNum = 85;
+            }
             p.plot(colNum, rowNum, SQUARE);
 			p.plot(colNum, rowNum + 1, SQUARE);
-            p.setColor(darkblue);
-            p.plot(colNum - 10, 3, SQUARE);
-            p.plot(colNum - 10, 4, SQUARE);
-            p.setColor(white);
 
-			colNum++;
+			p.setColor(darkblue);
+            p.plot(colNum + 10, rowNum, SQUARE);
+            p.plot(colNum + 10, rowNum+1, SQUARE);
+			p.setColor(white);
 
-			if (colNum == 85)
-            {
-                colNum = 0;
-            }
+			colNum--;
 
-			timer = LOG_SPEED; // reset back timer
+			timer = LOG_SPEED;
 		}
 
         break;
@@ -162,8 +161,8 @@ void Log::drawLog(int lane)
 			p.plot(colNum, rowNum + 1, SQUARE);
 
 			p.setColor(darkblue);
-			p.plot(colNum - 10, 8, SQUARE);
-			p.plot(colNum - 10, 9, SQUARE);
+            p.plot(colNum - 10, rowNum, SQUARE);
+            p.plot(colNum - 10, rowNum+1, SQUARE);
 			p.setColor(white);
 			colNum++;
 			if (colNum == 85) colNum = 0;
@@ -173,18 +172,24 @@ void Log::drawLog(int lane)
 
     case 3:
         rowNum = 13;
-		if (timer == 0) {
+		if (timer == 0)
+        {
+            if (colNum == 0)
+            {
+                colNum = 85;
+            }
             p.plot(colNum, rowNum, SQUARE);
 			p.plot(colNum, rowNum + 1, SQUARE);
 
-            p.setColor(darkblue);
-            p.plot(colNum-10, 13, SQUARE);
-            p.plot(colNum-10, 14, SQUARE);
-            p.setColor(white);
-            colNum++;
-			if (colNum == 85) colNum = 0;
+			p.setColor(darkblue);
+            p.plot(colNum + 10, rowNum, SQUARE);
+            p.plot(colNum + 10, rowNum+1, SQUARE);
+			p.setColor(white);
+
+			colNum--;
+
 			timer = LOG_SPEED;
-        }
+		}
         break;
 
     case 4:
@@ -194,8 +199,8 @@ void Log::drawLog(int lane)
 			p.plot(colNum, rowNum + 1, SQUARE);
 
             p.setColor(darkblue);
-            p.plot(colNum-10, 18, SQUARE);
-            p.plot(colNum-10, 19, SQUARE);
+            p.plot(colNum - 10, rowNum, SQUARE);
+            p.plot(colNum - 10, rowNum+1, SQUARE);
             p.setColor(white);
             colNum++;
 			if (colNum == 85) colNum = 0;
@@ -205,18 +210,24 @@ void Log::drawLog(int lane)
 
     case 5:
         rowNum = 23;
-		if (timer == 0) {
+		if (timer == 0)
+        {
+            if (colNum == 0)
+            {
+                colNum = 85;
+            }
             p.plot(colNum, rowNum, SQUARE);
 			p.plot(colNum, rowNum + 1, SQUARE);
 
-            p.setColor(darkblue);
-            p.plot(colNum-10, 23, SQUARE);
-            p.plot(colNum-10, 24, SQUARE);
-            p.setColor(white);
-            colNum++;
-			if (colNum == 85) colNum = 0;
+			p.setColor(darkblue);
+            p.plot(colNum + 10, rowNum, SQUARE);
+            p.plot(colNum + 10, rowNum+1, SQUARE);
+			p.setColor(white);
+
+			colNum--;
+
 			timer = LOG_SPEED;
-        }
+		}
         break;
     }
 }
