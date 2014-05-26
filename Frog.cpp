@@ -100,16 +100,9 @@ void Frog::setColor()
     {
         color = 'd';
     }
-    if( rowNum == 23 || rowNum == 18 || rowNum == 13 || rowNum == 8 || rowNum == 3 )
-    {
-        if( colNum > 0 && colNum < 10 )
-        {
-            color = 'w';
-        }
-    }
 }
 
-void Frog:: drawFrog( char c )
+void Frog::drawFrog( char c )
 {
     if( winCount < 5 )
     {

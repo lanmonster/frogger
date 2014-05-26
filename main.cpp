@@ -48,8 +48,6 @@ int main()
     game.drawWorld();
 
     game.f.drawFrog(game.f.getColor());
-    for( int i = 1; i < 6; i++ )
-    game.r.logs[i-1].drawLog(i);
 
     while( ch != 'q' && ch != 'Q' && game.f.getWinCount() != 5 && game.f.getNumLives() > 0)
     {
@@ -58,6 +56,17 @@ int main()
             ch = _getch();
             game.update(ch);
         }
+        else
+		{
+			// frog
+			game.f.drawFrog(game.f.getColor());
+			// logs
+			for( int i = 1; i < 6; i++ )
+            {
+                game.r.logs[i-1].drawLog(i);
+                game.s.cars[i-1].drawCar(i);
+            }
+		}
     }
 
     if( ch == 'q' || ch == 'Q' )
