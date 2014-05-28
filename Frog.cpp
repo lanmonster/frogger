@@ -130,15 +130,7 @@ void Frog::drawFrog( char c )
             p.plot(i, rowNum, SQUARE);
             p.plot(i, rowNum+1, SQUARE);
         }
-        //std::cout <q< "\tRow: " << rowNum;
-        //std::cout << "\tCol: " << colNum;
     }
-
-//    if( rowNum == 0 )
-//    {
-//        win();
-//    }
-//    if( frog)
 }
 
 void Frog::win()
@@ -157,7 +149,6 @@ void Frog::win()
 void Frog::die()
 {
     //show a big red X on the screen
-    //Sleep(100);
     setColor();
     drawFrog(color);
 

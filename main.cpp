@@ -64,17 +64,16 @@ int main()
         }
         else
 		{
-
-			// frog
 			game.f.drawFrog(game.f.getColor());
-			// logs
-			for( int i = 1; i < 6; i++ )
-            {
-                random = rand() % 5 + 1;
-                game.r.logs[random-1].drawLog(random);
 
-                random = rand() % 5 + 1;
-                game.s.cars[random-1].drawCar(random);
+            random = rand() % 5 + 1;
+			for( int i = 0; i < random; i++ )
+            {
+                //random = rand() % 5 + 1;
+                game.r.logs[i].drawLog(i);
+
+                //random = rand() % 5 + 1;
+                game.s.cars[i].drawCar(i);
             }
 		}
     }
